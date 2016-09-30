@@ -1,0 +1,13 @@
+c:\users\lazor\documents\visual studio 2015\Projects\Lab_0\Lab_0\bin\Debug\Lab_0.exe.config
+D:\Лекции C#\методички\o_p_lab0\Lab_0\Lab_0\bin\Debug\Lab_0.exe.config
+D:\Лекции C#\методички\o_p_lab0\Lab_0\Lab_0\bin\Debug\Lab_0.exe
+D:\Лекции C#\методички\o_p_lab0\Lab_0\Lab_0\bin\Debug\Lab_0.pdb
+D:\Лекции C#\методички\o_p_lab0\Lab_0\Lab_0\obj\Debug\Lab_0.csprojResolveAssemblyReference.cache
+D:\Лекции C#\методички\o_p_lab0\Lab_0\Lab_0\obj\Debug\Lab_0.exe
+D:\Лекции C#\методички\o_p_lab0\Lab_0\Lab_0\obj\Debug\Lab_0.pdb
+C:\Users\lazor\Google Диск\Задачки C#\o_p_lab0\Lab_0\Lab_0\bin\Debug\Lab_0.exe.config
+C:\Users\lazor\Google Диск\Задачки C#\o_p_lab0\Lab_0\Lab_0\obj\Debug\Lab_0.exe
+C:\Users\lazor\Google Диск\Задачки C#\o_p_lab0\Lab_0\Lab_0\obj\Debug\Lab_0.pdb
+C:\Users\lazor\Google Диск\Задачки C#\o_p_lab0\Lab_0\Lab_0\bin\Debug\Lab_0.exe
+C:\Users\lazor\Google Диск\Задачки C#\o_p_lab0\Lab_0\Lab_0\bin\Debug\Lab_0.pdb
+C:\Users\lazor\Google Диск\Задачки C#\o_p_lab0\Lab_0\Lab_0\obj\Debug\Lab_0.csprojResolveAssemblyReference.cache
