@@ -20,7 +20,7 @@ namespace Lab_2
             {
                 
                 //Function 
-                for (int x = -3; x < 4; ++x)
+                for (double x = -3; x < 3; x += 0.75)
                 {
                    var  y = ((1 - (Math.Pow(x, 2))) / (1 + (Math.Pow(x, 4))));
 
@@ -29,8 +29,8 @@ namespace Lab_2
 
 
                 }
-              
-
+                var j  = ((1 - (Math.Pow(2, 2))) / (1 + (Math.Pow(2, 4))));
+                file1.WriteLine(j);
             }
         }
 
