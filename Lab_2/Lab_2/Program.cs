@@ -11,38 +11,48 @@ namespace Lab_2
     {
         static void Main(string[] args)
         {
-            int value = 250;
-            Console.WriteLine(value);
-            Console.WriteLine("value = {0, 5}", value);
-            int a = -12;
-            int b = 20;
-            Console.WriteLine("a = {0, 4}  b = {1, 3}", a, b);
-            double myDouble = 1234.56789;
-            Console.WriteLine("myDouble = {0, 10:f3}", myDouble);
-            float myFloat = 1234.56789f;
-            var л = 1.2365f;
-            Console.Write(л.GetType().Name);
-            Console.WriteLine("{0:C}", 123.342);
-            Console.WriteLine("myFloat = {0, 10:f3}", myFloat);
-            decimal myDecimal = 1234.56789m;
-            Console.WriteLine("myDecimal = {0, 10:f3}", myDecimal);
-            Console.WriteLine("{0:C}", 123.342);
-            var s = string.Format("{0:C}", 123.342);
-            Console.WriteLine(s);
+            string[] lines = {"one", "two", "three", "four", "five"};
+            string text = "A class is the most powerful data type in C#. Like a structure, \n" +
+                       "a class defines the data and behavior of the data type. ";
+
+            File.WriteAllLines(@"D:\Лекции C#\методички\Start_learning\Lab_2\lines.txt", lines);
+            File.WriteAllText(@"D:\Лекции C#\методички\Start_learning\Lab_2\text.txt", text);
+            using (StreamWriter file = new StreamWriter(@"D:\Лекции C#\методички\Start_learning\Lab_2\testyourluck.txt"))
+            {
+                file.WriteLine(" \t test your luck");
+                foreach (var line in lines)
+                {
+                    if (!line.Contains("two"))
+                    {
+                        file.WriteLine(line);
+                    }
+                }
+
+            }
+            // Read the file as one string.
+            string textRead = File.ReadAllText(@"D:\Лекции C#\методички\Start_learning\Lab_2\testyourluck.txt");
+            
+            // Display the file contents to the console. Variable text is a string.
+            Console.WriteLine("The text in file testyourluck.txt for {0} is \r\n {1}", DateTime.Now, textRead);
+
+            // Read each line of the file into a string array. Each element
+            // of the array is one line of the file.
+            string[] a = File.ReadAllLines(@"D:\Лекции C#\методички\Start_learning\Lab_2\lines.txt");
+
+
+            // Display the file contents by using a foreach loop.
+            Console.WriteLine("\n Every line in file lines.txt : ");
+            foreach (var line in a)
+            {
+                // Use a tab to indent each line of the file.
+                Console.WriteLine("\t" + line);
+            }
+
+            string s = File.ReadAllText(@"D:\Лекции C#\методички\Start_learning\Lab_2\text.txt");
+            Console.WriteLine("\n All text in the file text.txt: \t\n {0}", s);
+            
+            Console.WriteLine("\n Press any key to exit");
             Console.ReadLine();
-
-
-
-            /////////////////////////////////////////////////////////////
-            /// 
-
-            string e;
-            double r, t;
-            StreamWriter f = new StreamWriter("out.txt");
-            StreamWriter f1 = new StreamWriter("in.txt");
-            f.WriteLine("test your luck");
-
-
 
         }
     }
