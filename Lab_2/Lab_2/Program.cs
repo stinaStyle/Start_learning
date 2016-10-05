@@ -38,10 +38,35 @@ namespace Lab_2
 
             using (StreamWriter file1 = new StreamWriter(@"D:\Лекции C#\методички\Start_learning\Lab_2\LAB_2.2.txt"))
             {
-                //Function 
-                Calculate(file1, -3, 3, 2, x => ((1 - (Math.Pow(x, 2))) / (1 + (Math.Pow(x, 4)))), "((1 - (Math.Pow(x, 2))) / (1 + (Math.Pow(x, 4))))");
-                Calculate(file1, -2, 2, 1.57, x => (Math.Sin(x)) / ((Math.Pow(x, 2)) - 1), "(Math.Sin(x)) / ((Math.Pow(x, 2)) - 1)");
-                Calculate(file1, -2, 4, 3.14, x => (2 * Math.PI) / (Math.Pow(x, 2) - Math.PI), "(2 * Math.PI) / (Math.Pow(x, 2) - Math.PI)");
+                using (StreamReader file = new StreamReader(@"D:\Лекции C#\методички\Start_learning\Lab_2\LAB_2.1.txt"))
+                {
+
+                    while (!file.EndOfStream)
+                    {
+                        double v = double.Parse(file.ReadLine());
+                        double k = double.Parse(file.ReadLine());
+                        double l = double.Parse(file.ReadLine());
+
+
+                        //Function 
+                        Calculate(file1, v, k, l, x => ((1 - (Math.Pow(x, 2)))/(1 + (Math.Pow(x, 4)))),
+                            "((1 - (Math.Pow(x, 2))) / (1 + (Math.Pow(x, 4))))");
+
+                        v = double.Parse(file.ReadLine());
+                        k = double.Parse(file.ReadLine());
+                        l = double.Parse(file.ReadLine());
+                        Calculate(file1, v, k, l, x => (Math.Sin(x))/((Math.Pow(x, 2)) - 1),
+                            "(Math.Sin(x)) / ((Math.Pow(x, 2)) - 1)");
+
+                        v = double.Parse(file.ReadLine());
+                        k = double.Parse(file.ReadLine());
+                        l = double.Parse(file.ReadLine());
+                        Calculate(file1, v, k, l, x => (2*Math.PI)/(Math.Pow(x, 2) - Math.PI),
+                            "(2 * Math.PI) / (Math.Pow(x, 2) - Math.PI)");
+                    }
+
+                }
+                
 
             }
         }
