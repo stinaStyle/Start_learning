@@ -43,26 +43,45 @@ namespace Lab_2
 
                     while (!file.EndOfStream)
                     {
-                        double v = double.Parse(file.ReadLine());
-                        double k = double.Parse(file.ReadLine());
-                        double l = double.Parse(file.ReadLine());
+                        
 
+                        for (int n = 1; n <= 3; n++)
+                        {
+                            double v = double.Parse(file.ReadLine());
+                            double k = double.Parse(file.ReadLine());
+                            double l = double.Parse(file.ReadLine());
+                            if (n == 1)
+                            {
+                                Calculate(file1, v, k, l, x => ((1 - (Math.Pow(x, 2))) / (1 + (Math.Pow(x, 4)))),
+                            "((1 - (Math.Pow(x, 2))) / (1 + (Math.Pow(x, 4))))");
+                            }
+                            else if (n == 2)
+                            {
+                                Calculate(file1, v, k, l, x => (Math.Sin(x)) / ((Math.Pow(x, 2)) - 1),
+                            "(Math.Sin(x)) / ((Math.Pow(x, 2)) - 1)");
+                            }
+                            else
+                            {
+                                Calculate(file1, v, k, l, x => (2 * Math.PI) / (Math.Pow(x, 2) - Math.PI),
+                            "(2 * Math.PI) / (Math.Pow(x, 2) - Math.PI)");
+                            }
+                        }
 
                         //Function 
-                        Calculate(file1, v, k, l, x => ((1 - (Math.Pow(x, 2)))/(1 + (Math.Pow(x, 4)))),
-                            "((1 - (Math.Pow(x, 2))) / (1 + (Math.Pow(x, 4))))");
-
-                        v = double.Parse(file.ReadLine());
-                        k = double.Parse(file.ReadLine());
-                        l = double.Parse(file.ReadLine());
-                        Calculate(file1, v, k, l, x => (Math.Sin(x))/((Math.Pow(x, 2)) - 1),
-                            "(Math.Sin(x)) / ((Math.Pow(x, 2)) - 1)");
-
-                        v = double.Parse(file.ReadLine());
-                        k = double.Parse(file.ReadLine());
-                        l = double.Parse(file.ReadLine());
-                        Calculate(file1, v, k, l, x => (2*Math.PI)/(Math.Pow(x, 2) - Math.PI),
-                            "(2 * Math.PI) / (Math.Pow(x, 2) - Math.PI)");
+//                        Calculate(file1, v, k, l, x => ((1 - (Math.Pow(x, 2)))/(1 + (Math.Pow(x, 4)))),
+//                            "((1 - (Math.Pow(x, 2))) / (1 + (Math.Pow(x, 4))))");
+//
+//                        v = double.Parse(file.ReadLine());
+//                        k = double.Parse(file.ReadLine());
+//                        l = double.Parse(file.ReadLine());
+//                        Calculate(file1, v, k, l, x => (Math.Sin(x))/((Math.Pow(x, 2)) - 1),
+//                            "(Math.Sin(x)) / ((Math.Pow(x, 2)) - 1)");
+//
+//                        v = double.Parse(file.ReadLine());
+//                        k = double.Parse(file.ReadLine());
+//                        l = double.Parse(file.ReadLine());
+//                        Calculate(file1, v, k, l, x => (2*Math.PI)/(Math.Pow(x, 2) - Math.PI),
+//                            "(2 * Math.PI) / (Math.Pow(x, 2) - Math.PI)");
                     }
 
                 }
