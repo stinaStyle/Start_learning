@@ -11,11 +11,15 @@ namespace Lab_3
 {
     class Program
     {
+        static double Point(double x, double y)
+        {
+            return x * x + y * y < 5 ? 1 : 0; ;
+        }
         static double makeDelta()
         {
             double a = 10;
             double b = -10;
-            double d = ((a - (b)) / 50);
+            double d = ((a - (b)) / 500);
             return d;
         }
 
@@ -48,40 +52,19 @@ namespace Lab_3
                 double x;
                 double y = 0;
                 double z = 0;
-                for (double i = 1.2; i > -1.2; i -= ((1.2 - (-1.2)) / 100))
+                for (double i = -10; i < 10; i += makeDelta())
                 {
 
                     x = i;
-                    for (double r = -2; r < 1.77; r += ((1.77 - (-2)) / 100))
+                    for (double r = -10; r < 10; r += makeDelta())
                     {
-                        var it = 0;
-                        var rt = x;
-                        var imt = y;
-                        var arg = (y * y) + (x * x);
-                        while ((arg < 4) && (it < 40))
-                        {
-                            double rt2 = (rt * rt) - (imt * imt) + y;
-                            imt = (2 * rt * imt) + x;
-                            rt = rt2;
-                            arg = (rt * rt) + (imt * imt);
-                            it += 1;
-                        }
-
-                        z = it;
-
-
-
-                        double min;
-                        double max;
                         y = r;
-                        file.Write(it + "\t");
-//                        file.Write((CompareMax((Math.Pow(x,3)), (Math.Pow(z,2))) + (Math.Cos(4*(Math.Pow(y,2))))) + "\t");
-//                        file.Write((CompareMin(x,y)+0.5) / (Math.Pow(CompareMax(x,y), 2) - Math.Sin(z)) + "\t");
-//                        file.Write( CompareMax( x, y, z) + "\t");
-//                        file.Write(CompareMin(x, y, z) + "\t");
-                        //                        min = x > y ? y : x;
-                        //                        max = y > x ? x : y;
-                        //                        file.Write(((min + 0.5) / (Math.Pow(max, 2)- (Math.Sin(z)))+ "\t"));
+
+                        
+                      
+                        
+                        file.Write(Point(x, y) + "\t");
+
                     }
                     file.Write("\r\n");
 
