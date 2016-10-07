@@ -19,52 +19,35 @@ namespace Lab_3
             return d;
         }
 
+        static double CompareMax(double x, double y)
+        {
+            double max = y >= x ? y : x;
+            return max;
+        }
         static double CompareMax(double x, double y, double z)
         {
-            double max = 0;
-            
-            if (x > y && x > z)
-            {
-                max = x;
-                if (y > x && y > z)
-                {
-                    max = y;
-                }
-                if (z > x && z > y)
-                {
-                    max = z;
-                }
-            }
-
+            double max = CompareMax(x,y) > z ? CompareMax(x,y): z;
             return max;
+        }
+
+        static double CompareMin(double x, double y)
+        {
+            return x <= y ? x : y; ;
         }
 
         static double CompareMin(double x, double y, double z)
         {
-          
-            double min = 0;
-            if (x < y && x < z)
-            {
-                min = x;
-                if (y < x && y < z)
-                {
-                    min = y;
-                }
-                if (z < x && z < y)
-                {
-                    min = z;
-                }
-            }
-
-            return min;
+            return CompareMin(x, y) > z ? z : CompareMin(x, y);
         }
+       
+        
         static void Main(string[] args)
         {
             using (StreamWriter file = new StreamWriter("table.txt"))
             {
                 double x;
                 double y;
-                double z = 2;
+                double z = 0;
                 for (double i = -10; i < 10; i += makeDelta())
                 {
 
