@@ -73,7 +73,7 @@ namespace Lab_3
 
                         double min;
                         double max;
-//                        y = r;
+                        y = r;
                         file.Write(it + "\t");
 //                        file.Write((CompareMax((Math.Pow(x,3)), (Math.Pow(z,2))) + (Math.Cos(4*(Math.Pow(y,2))))) + "\t");
 //                        file.Write((CompareMin(x,y)+0.5) / (Math.Pow(CompareMax(x,y), 2) - Math.Sin(z)) + "\t");
