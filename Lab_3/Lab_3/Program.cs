@@ -11,15 +11,50 @@ namespace Lab_3
 {
     class Program
     {
+
         static double Point(double x, double y)
         {
-            return x * x + y * y < 5 ? 1 : 0; ;
+//          
+//            if (x>5) return 0;
+//            if (x < -5) return 0;
+//            if (y > 5) return 0;
+//            if (y < -5) return 0;
+
+            double x1 = 12;
+            double x2 = -12;
+            double y1 = 12;
+            double y2 = -12;
+
+           
+           
+            
+            if (x < 0 && y > 0)
+            {
+                if (-12 * x - 12 * y + 144 > 0) return 7;
+                return 1;
+            }
+            if (x > 0 && y > 0)
+            {
+                if (-12 * x - 12 * y + 144 > 0) return 7;
+                return 2;
+            }
+            if (x > 0 && y < 0)
+            {
+                if (-12 * x - 12 * y + 144 > 0) return 7;
+                return 3;
+            }
+            if (x < 0 && y < 0)
+            {
+                if ((-12 * x - 12 * y + 144 > 0)) return 7;
+                return 4;
+            }
+            return 0;
         }
         static double makeDelta()
         {
-            double a = 10;
-            double b = -10;
-            double d = ((a - (b)) / 500);
+            double a = 200;
+            double b = -200;
+            double d = ((a - (b)) / 50);
             return d;
         }
 
@@ -49,19 +84,17 @@ namespace Lab_3
         {
             using (StreamWriter file = new StreamWriter("table.txt"))
             {
-                double x;
-                double y = 0;
+                double x = 2;
+                double y = -2;
                 double z = 0;
-                for (double i = -10; i < 10; i += makeDelta())
+//                file.Write(Point(x,y));
+                for (double i = -200; i < 200; i += makeDelta())
                 {
 
                     x = i;
-                    for (double r = -10; r < 10; r += makeDelta())
+                    for (double r = -200; r < 200; r += makeDelta())
                     {
-                        y = r;
-
-                        
-                      
+                        y = r;                                              
                         
                         file.Write(Point(x, y) + "\t");
 
