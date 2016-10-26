@@ -13,8 +13,8 @@ namespace Lab_5
         static int min;
         private static int plus;
         static int[] arr1 = new int[N];
-        static Random rnd = new Random();
-        static int[] arr2 = new int[] { 1, 2, -3, -4, 5, -6, 7, 8, -9, 10, 11, 12, -13, 14, -15 };
+        public static Random rnd = new Random();
+        public static int[] arr2 = new int[] { 1, 2, -3, -4, 5, -6, 7, 8, -9, 10, 11, 12, -13, 14, -15 };
         static int[] arr3 = new int[N];
         static int[] arr4 = new int[N];
         
@@ -60,7 +60,9 @@ namespace Lab_5
         {
             
             WriteFile();
-            
+            Two.WriteFileTwo();
+            Three.WriteFileThree();
+
         }
     }
 }
