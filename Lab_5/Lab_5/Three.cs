@@ -28,7 +28,7 @@ namespace Lab_5
                         break;
                     }
                 }
-
+                 
                 double ans = ((maxVal + minVal)/2);
                 fileThree.Write("Среднее арифметическое между первым отрицательным и максимальным = {0}", ans);
 
