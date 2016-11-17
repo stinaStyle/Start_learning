@@ -122,7 +122,7 @@ namespace Labirint
             for (int i = 0; i < 10; i++)
             {
                 string g = "g";
-                y = 20;
+                y = 20+i;
                 x = i;
                 arr[i, y] = g;
                 Console.Write(arr[i, y]);
